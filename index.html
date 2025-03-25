@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS Optimizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Operating System Optimizer</h1>
+        <button id="toggleDarkMode" class="btn">Toggle Dark Mode</button>
+        <div class="modules">
+            <div class="module">
+                <h2>System Information</h2>
+                <button class="btn" onclick="runModule('system_info')">Get Info</button>
+                <div id="system_info" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>Memory Cleaner</h2>
+                <button class="btn" onclick="runModule('memory_cleaner')">Clean Memory</button>
+                <div id="memory_cleaner" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>Disk Manager</h2>
+                <button class="btn" onclick="runModule('disk_manager')">Clean Disk</button>
+                <div id="disk_manager" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>CPU Optimizer</h2>
+                <button class="btn" onclick="runModule('cpu_optimizer')">Optimize CPU</button>
+                <div id="cpu_optimizer" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>Network Optimizer</h2>
+                <button class="btn" onclick="runModule('network_optimizer')">Optimize Network</button>
+                <div id="network_optimizer" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>Process Manager</h2>
+                <button class="btn" onclick="runModule('process_manager')">Manage Processes</button>
+                <div id="process_manager" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>Battery Optimizer</h2>
+                <button class="btn" onclick="runModule('battery_optimizer')">Optimize Battery</button>
+                <div id="battery_optimizer" class="result"></div>
+            </div>
+        </div>
+        <div id="loader" class="loader hidden"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
