@@ -1,7 +1,7 @@
 # Overview
 The Operating System Optimizer is a powerful tool designed to enhance the speed, efficiency, and overall performance of your Windows system. It provides a comprehensive suite of optimization features, ensuring a seamless computing experience.
 
-
+![image alt](https://github.com/hotaanshuman4/OS_Optimizer/blob/c98ded30e530b13ec64802d6540facf237e6b02f/system%20optimizer.jpg)
 # Key Features
 • System Information – Get detailed insights into your system’s hardware and software specifications.
 
