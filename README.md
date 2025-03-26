@@ -29,7 +29,9 @@ The Operating System Optimizer is a powerful tool designed to enhance the speed,
 
 # Additional Features
 • Real-Time Performance Monitoring – Graphical representation of CPU performance, temperature, and clock speed (updates every 2 seconds).
+
 • Dark & Light Mode – Switch between themes for a comfortable user experience.
+
 • Dynamic CPU Temperature Tracer – Live tracking of CPU heat levels to prevent overheating.
 
 # Contact
