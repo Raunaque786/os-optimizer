@@ -5,11 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OS Optimizer</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Operating System Optimizer</h1>
+        <div class="update-container">
+            <p id="updateStatus">Checking for updates...</p>
+        </div>
         <button id="toggleDarkMode" class="btn">Toggle Dark Mode</button>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="restartToggle" onchange="toggleRestart()">
+                <span class="slider"></span>
+            </label>
+            <span id="restartLabel">Restart: Off</span>
+            <div id="cpuStats" class="cpu-stats">
+                <p>CPU Temp: <span id="cpuTemp">--</span>°C</p>
+                <p>Clock Speed: <span id="cpuSpeed">--</span> GHz</p>
+            </div>
+        </div>
         <div class="modules">
             <div class="module">
                 <h2>System Information</h2>
@@ -45,6 +60,37 @@
                 <h2>Battery Optimizer</h2>
                 <button class="btn" onclick="runModule('battery_optimizer')">Optimize Battery</button>
                 <div id="battery_optimizer" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>Startup Manager</h2>
+                <button class="btn" onclick="runModule('startup_manager')">Manage Startup</button>
+                <div id="startup_manager" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>System Health Check</h2>
+                <button class="btn" onclick="runModule('system_health')">Check Health</button>
+                <div id="system_health" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>Junk File Cleaner</h2>
+                <button class="btn" onclick="runModule('junk_file_cleaner')">Clean Junk Files</button>
+                <div id="junk_file_cleaner" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>System Booster</h2>
+                <button class="btn" onclick="runModule('system_booster')">Boost System</button>
+                <div id="system_booster" class="result"></div>
+            </div>
+            <div class="module">
+                <h2>Power Plan Manager</h2>
+                <button class="btn" onclick="runModule('power_plan_manager')">Optimize Power</button>
+                <div id="power_plan_manager" class="result"></div>
+            </div>
+        </div>
+        <div class="module" id="cpu_wave_module">
+            <h2>CPU Performance </h2>
+            <div id="cpu_wave" class="result">
+                <canvas id="cpuWaveChart" width="300" height="100"></canvas>
             </div>
         </div>
         <div id="loader" class="loader hidden"></div>
