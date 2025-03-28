@@ -36,6 +36,6 @@ The Operating System Optimizer is a powerful tool designed to enhance the speed,
 
 # Contact
 • This release is in open beta stage. Feedback and bug reports are welcome.
-• For any inquiries or issues, please contact hotaanshuman4@gmail.com
+• For any inquiries or issues, please contact raunaque928@gmail.com
 
 
